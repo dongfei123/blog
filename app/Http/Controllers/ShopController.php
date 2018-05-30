@@ -29,7 +29,7 @@ class ShopController extends Controller
         if($act == 0){
             //修改活动商品的状态
             DB::update('update shops set status = ? where status = ?',[0,1]);
-        }
+        } 
         // dd($active);
         //获取商品的数据
         // $shop = DB::table('shops')->paginate(3);

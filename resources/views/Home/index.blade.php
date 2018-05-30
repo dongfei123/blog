@@ -353,7 +353,7 @@
     <?php $num = 0;?>
      @foreach($cates as $value)
 
-     @if($num < 6) 
+     @if($num < 2) 
   <div class="f1"> 
     <div class="am-container "> 
       <div class="shopTitle ">
