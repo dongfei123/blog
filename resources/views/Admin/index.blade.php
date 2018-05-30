@@ -1,0 +1,9 @@
+@extends('AdminPublic.public')
+@section('adminindex')
+<h1>后台首页</h1>
+@endsection
+@section('title','首页')
+@section('user')
+{!!$user!!}
+@stop
+@section('pic',$pic?$pic:'/Admin/b/example/profile.jpg')
