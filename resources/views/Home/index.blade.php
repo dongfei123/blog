@@ -410,7 +410,7 @@
                 }
             }
 
-       
+            // dd($arr);
 
        ?>
    
@@ -429,12 +429,16 @@
       <div class="am-u-sm-7 am-u-md-5 am-u-lg-2 text-two big"> 
        <div class="outer-con "> 
         <div class="title ">
-          雪之恋和风大福 
+          {{$arr[1]->name}} 
         </div> 
+          <?php 
+                $p = explode('--',$arr[1]->descr);
+                $bigp = $p[3];
 
-
+          ?>
+         
         <div class="sub-title ">
-           
+           &yen;{{$bigp}}
         </div> 
        </div>
 
@@ -442,70 +446,99 @@
        <a href="/home/show/{{$arr[1]->id}}"><img src="{{$arr[1]->pic}}" /></a>
    
       </div> 
+
+
       <li> 
        <div class="am-u-md-2 am-u-lg-2 text-three"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
+           {{$arr[1]->name}} 
          </div> 
+         <?php 
+                $p = explode('--',$arr[1]->descr);
+                $price1 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+            &yen;{{$price1}} 
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/1.jpg " /></a> 
+        <a href="/home/show/{{$arr[2]->id}}"><img src="{{$arr[2]->pic}}" /></a> 
        </div> </li> 
+
+
       <li> 
        <div class="am-u-md-2 am-u-lg-2 text-three sug"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
-         </div> 
+           {{$arr[2]->name}} 
+         </div>
+         <?php 
+                $p = explode('--',$arr[2]->descr);
+                $price2 = $p[3];
+
+          ?> 
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$price2}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/2.jpg " /></a> 
+        <a href="/home/show/{{$arr[3]->id}}"><img src="{{$arr[3]->pic}}" /></a> 
        </div> </li> 
       <li> 
        <div class="am-u-sm-4 am-u-md-5 am-u-lg-4 text-five"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
+           {{$arr[3]->name}}
          </div> 
+         <?php 
+                $p = explode('--',$arr[3]->descr);
+                $price3 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$price3}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/5.jpg" /></a> 
+        <a href="$arr[4]->id"><img src="{{$arr[4]->pic}}" /></a> 
        </div> </li> 
       <li> 
        <div class="am-u-sm-4 am-u-md-2 am-u-lg-2 text-six"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
+           {{$arr[4]->name}} 
          </div> 
+         <?php 
+                $p = explode('--',$arr[4]->descr);
+                $price4 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$price4}} 
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/3.jpg" /></a> 
+        <a href="{{$arr[5]->id}}"><img src="{{$arr[5]->pic}}" /></a> 
        </div> </li> 
       <li> 
        <div class="am-u-sm-4 am-u-md-2 am-u-lg-4 text-six"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
-         </div> 
+           {{$arr[5]->name}}
+         </div>
+         <?php 
+                $p = explode('--',$arr[5]->descr);
+                $price5 = $p[3];
+
+          ?> 
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$price4}} 
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/4.jpg" /></a> 
+        <a href="{{$arr[6]->id}}"><img src="{{$arr[6]->pic}}" /></a> 
        </div> </li> 
      </div> 
      <div class="clear "></div> 
@@ -533,7 +566,7 @@
        <div class="word">
         <?php $sid = [];?>
        @foreach($cate[1] as $v) 
-       <?php $sid[] = $v->id ?>
+       <?php $sid[] = $v->id ;?>
         <a class="outer" href="/home/index/{{$v->id}}"><span class="inner"><b class="text">{{$v->name}}</b></span></a> 
         @endforeach
        </div>
@@ -576,85 +609,129 @@
       <div class="am-u-sm-7 am-u-md-4 text-two big"> 
        <div class="outer-con "> 
         <div class="title ">
-          雪之恋和风大福 
+            {{$array[1]->name}}
         </div> 
+        <?php 
+                $p = explode('--',$array[1]->descr);
+                $pri1 = $p[3];
+
+          ?> 
         <div class="sub-title ">
-        
+          &yen;{{$pri1}}
         </div> 
        </div> 
 
 
-       <a href="{{$array[1]->id}}"><img src="{{$array[1]->pic}}" /></a> 
-      </div> 
+       <a href="/home/show/{{$array[1]->id}}"><img src="{{$array[1]->pic}}" /></a> 
+      </div>
+
+
       <li> 
        <div class="am-u-sm-7 am-u-md-4 text-two"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           雪之恋和风大福 
+           {{$array[2]->name}}
          </div> 
+         <?php 
+                $p = explode('--',$array[2]->descr);
+                $pri2 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;13.8 
+           &yen;{{$pri2}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/6.jpg" /></a> 
+
+        <a href="/home/show/{{$array[2]->id}}"><img src="{{$array[2]->pic}}" /></a> 
        </div> </li> 
+
+
       <li> 
        <div class="am-u-sm-3 am-u-md-2 text-three sug"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
+           {{$array[3]->name}}
          </div> 
+        <?php 
+                $p = explode('--',$array[3]->descr);
+                $pri3 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$pri3}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/7.jpg" /></a> 
+        <a href="/home/show/{{$array[3]->id}}"><img src="{{$array[3]->pic}}" /></a> 
        </div> </li> 
+
+
       <li> 
        <div class="am-u-sm-3 am-u-md-2 text-three big"> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
+           {{$array[4]->name}} 
          </div> 
+
+        <?php 
+                $p = explode('--',$array[4]->descr);
+                $pri4 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$pri4}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/10.jpg" /></a> 
+        <a href="/home/show/{{$array[4]->id}}"><img src="{{$array[4]->pic}}" /></a> 
        </div> </li> 
+
+
       <li> 
        <div class="am-u-sm-3 am-u-md-2 text-three "> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
-         </div> 
+            {{$array[5]->name}}
+         </div>
+         <?php 
+                $p = explode('--',$array[5]->descr);
+                $pri5 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$pri5}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/8.jpg" /></a> 
+        <a href="/home/show/{{$array[5]->id}}"><img src="{{$array[5]->pic}}" /></a> 
        </div> </li> 
+
+
       <li> 
        <div class="am-u-sm-3 am-u-md-2 text-three "> 
         <div class="boxLi"></div> 
         <div class="outer-con "> 
          <div class="title ">
-           小优布丁 
-         </div> 
+         {{$array[6]->name}}
+         </div>
+         <?php 
+                $p = explode('--',$array[6]->descr);
+                $pri6 = $p[3];
+
+          ?>
          <div class="sub-title ">
-           &yen;4.8 
+           &yen;{{$pri6}}
          </div> 
         </div> 
-        <a href="# "><img src="/H/images/9.jpg" /></a> 
+        <a href="/home/show/{{$array[6]->id}}"><img src="{{$array[6]->pic}}" /></a> 
        </div> </li> 
+
+
      </div> 
      <div class="clear "></div> 
     </div> 
-    <?php $num++;?>
+    <?php $num++ ;?>
    @endif
    @endforeach
 
