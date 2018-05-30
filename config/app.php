@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -192,7 +192,11 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+		'Image' => Intervention\Image\Facades\Image::class,
 
     ],
+	
+	'shop_upload'=>'./uploads/shop/'.date('Y-m-d'),
+    'user_upload'=>'./uploads/user/'.date('Y-m-d'),
 
 ];
